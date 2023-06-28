@@ -3,6 +3,7 @@ import { MyFunComponent } from "./fun/fun";
 import { Desciption } from "./description/description";
 import { Expertise } from "./expertise/expertise";
 import { Journey } from "./journey/journey";
+import { Mission } from "./mission/mission";
 
 // You will find these components in the "custom components"
 // section of the visual editor
@@ -117,6 +118,37 @@ export const CUSTOM_COMPONENTS: RegisteredComponent[] = [
           {
             name: "content",
             type: "string",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    component: Mission,
+    name: "Mission",
+    inputs: [
+      {
+        name: "reviews",
+        type: "list",
+        defaultValue: [
+          {
+            reviewText: "hello",
+          },
+        ],
+        subFields: [
+          {
+            name: "label",
+            type: "string",
+          },
+          {
+            name: "content",
+            type: "string",
+          },
+          {
+            name: "image",
+            type: "file",
+            allowedFileTypes: ["jpeg", "jpg", "png", "svg"],
+            required: true,
           },
         ],
       },
