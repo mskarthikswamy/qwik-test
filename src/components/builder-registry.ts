@@ -4,6 +4,7 @@ import { Desciption } from "./description/description";
 import { Expertise } from "./expertise/expertise";
 import { Journey } from "./journey/journey";
 import { Mission } from "./mission/mission";
+import { Values } from "./values/values";
 
 // You will find these components in the "custom components"
 // section of the visual editor
@@ -149,6 +150,39 @@ export const CUSTOM_COMPONENTS: RegisteredComponent[] = [
             type: "file",
             allowedFileTypes: ["jpeg", "jpg", "png", "svg"],
             required: true,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    component: Values,
+    name: "Values",
+    inputs: [
+      {
+        name: "reviews",
+        type: "list",
+        defaultValue: [
+          {
+            reviewText: "hello",
+          },
+        ],
+        subFields: [
+          {
+            name: "heading",
+            type: "string",
+          },
+          {
+            name: "subheading",
+            type: "string",
+          },
+          {
+            name: "contenthead",
+            type: "string",
+          },
+          {
+            name: "content",
+            type: "string",
           },
         ],
       },
